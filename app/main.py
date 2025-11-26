@@ -1,6 +1,6 @@
 from fastapi import FastAPI, UploadFile
 import pandas as pd
-from joblib import load # your ML prediction logic
+from joblib import load
 
 app = FastAPI(
     title="AI Predictive Machine Failure Detector",
