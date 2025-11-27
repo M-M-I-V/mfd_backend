@@ -21,7 +21,7 @@ def generate_synthetic_logs(n = 2000, anomaly_fraction = 0.5, seed = 42):
     np.random.seed(seed)  # set RNG seed so generated data is reproducible
 
     # create a sequence of timestamps starting at 2025-01-01 at 1-minute intervals
-    timestamps = pd.date_range("2025-01-01", periods = n, freq = "T")
+    timestamps = pd.date_range("2025-01-01", periods = n, freq = "min")
 
     # generate normal (non-anomalous) sensor readings for each row
     temperature = np.random.normal(loc = 60, scale = 5, size = n)  # degrees
